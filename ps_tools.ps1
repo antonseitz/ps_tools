@@ -67,6 +67,7 @@ $is_exe=$True
 
 $name=$tools[$choice - 1 ]
 $exe =$url.EndsWith(".exe")
+$msi =$url.EndsWith(".msi")
 $zip =$url.EndsWith(".zip")
 cd $env:USERPROFILE
 if (test-path "Downloads") { 
@@ -75,6 +76,7 @@ $Downloads=$true
 }
 
 if ($zip) { $file= $name + ".zip" }
+if ($msi) { $file= $name + ".msi" }
 if ($exe -or $is_exe) { $file= $name + ".exe"} 
 #else {$file = $name}
 
@@ -92,11 +94,11 @@ if (test-path $file) { remove-item $file }
 [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
 Invoke-WebRequest -Uri $url -outfile $file
 
-if (-not $exe -and -not $is_exe){ expand-archive -destinationpath $name -path $file -force } else { move-item -force $file $name}
+if ($zip){ expand-archive -destinationpath $name -path $file -force } else { move-item -force $file $name}
 
 cd $name
 
-if ( $run_this_exe_after_unzip -ne $null ){ . "./$run_this_exe_after_unzip" } elseif ($exe -or $is_exe) { . "./$file" } else { dir }
+if ( $run_this_exe_after_unzip -ne $null ){ . "./$run_this_exe_after_unzip" } elseif ($exe -or $is_exe -or $msi) { . "./$file" } else { dir }
 
 if ( $zip -eq $true ){
 
