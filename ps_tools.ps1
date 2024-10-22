@@ -46,8 +46,7 @@ $run_this_exe_after_unzip='StressMyPC.exe'}
 $run_this_exe_after_unzip='TreeSizeFree.exe'
 }
 
-"12" { $url='https://github.com/windirstat/windirstat/releases/download/release%2Fv2.0.1/WinDirStat-x64.msi'
-}
+"12" { $url='https://github.com/windirstat/windirstat/releases/download/release%2Fv2.0.1/WinDirStat-x64.msi'}
 
 
 "13" { $url='https://github.com/WinMerge/winmerge/releases/download/v2.16.42.1/WinMerge-2.16.42.1-x64-Setup.exe' }
