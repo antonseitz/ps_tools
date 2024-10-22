@@ -1,5 +1,5 @@
 # ACHTUNG : Wenn man mit Copy Paste arbeitet, sollte man mit Umbrüchen sparen, da sonst z.B. die switch Anweisungen nicht mehr gehen.
-$tools=@("BlueScreenViewer", "PSTools", "RegistryChangesView","wol.exe", "TeamviewerQuickSupport", "CPU-Z", "Notepad_plus_plus", "7-Zip", "Speccy", "StressMyPC", "TreeSizeFree", "WinMerge", "VenMon_Multipinger", "AllDup Dedup tool" , "Github Desktop")
+$tools=@("BlueScreenViewer", "PSTools", "RegistryChangesView","wol.exe", "TeamviewerQuickSupport", "CPU-Z", "Notepad_plus_plus", "7-Zip", "Speccy", "StressMyPC", "TreeSizeFree","WinDirStat", "WinMerge", "VenMon_Multipinger", "AllDup Dedup tool" , "Github Desktop")
 
 $n=1
 $run_this_exe_after_unzip=$null
@@ -46,20 +46,20 @@ $run_this_exe_after_unzip='StressMyPC.exe'}
 $run_this_exe_after_unzip='TreeSizeFree.exe'
 }
 
+"12" { $url='https://github.com/windirstat/windirstat/releases/download/release%2Fv2.0.1/WinDirStat-x64.msi'
 
 
 
+"13" { $url='https://github.com/WinMerge/winmerge/releases/download/v2.16.42.1/WinMerge-2.16.42.1-x64-Setup.exe' }
 
-"12" { $url='https://github.com/WinMerge/winmerge/releases/download/v2.16.42.1/WinMerge-2.16.42.1-x64-Setup.exe' }
-
-"13" { $url='https://sites.google.com/site/venturalcom/VM-232.zip' 
+"14" { $url='https://sites.google.com/site/venturalcom/VM-232.zip' 
 $run_this_exe_after_unzip='Venmon64.exe' }
 
-"14" {$url='https://www.alldup.de/download/AllDupSetup.exe'
+"15" {$url='https://www.alldup.de/download/AllDupSetup.exe'
 
 }
 
-"15" {$url='https://central.github.com/deployments/desktop/desktop/latest/win32'
+"16" {$url='https://central.github.com/deployments/desktop/desktop/latest/win32'
 $is_exe=$True
 }
 
